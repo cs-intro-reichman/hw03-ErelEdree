@@ -3,7 +3,7 @@
  */
 public class LoanCalc {
 
-	static double epsilon = 0.01; // The computation tolerance (estimation error)
+	static double epsilon = 0.001; // The computation tolerance (estimation error)
 	static int iterationCounter; // Monitors the efficiency of the calculation
 
 	/**
@@ -45,11 +45,12 @@ public class LoanCalc {
 		double test_loan = loan;
 		double search = loan / n;
 		{
-			while (test_loan > 0) {
+			while (test_loan > epsilon) {
 				test_loan = endBalance(loan, rate, n, search);
 				iterationCounter++;
 				search += epsilon;
 			}
+			iterationCounter--;
 		}
 		return search;
 
@@ -89,6 +90,7 @@ public class LoanCalc {
 	private static double endBalance(double loan, double rate, int n, double payment) {
 		// Replace the following statement with your code
 		double test_loan = loan;
+		rate = rate / 100;
 		for (int i = 0; i < n; i++) {
 			test_loan = test_loan - payment;
 			test_loan = test_loan * (1 + rate);
