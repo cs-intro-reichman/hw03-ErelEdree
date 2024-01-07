@@ -35,8 +35,8 @@ public class Calendar0 {
 		System.out.println("Month 5 has 31 days");
 		System.out.println("Month 6 has 30 days");
 		System.out.println("Month 7 has 31 days");
-		System.out.println("Month 8 has 30 days");
-		System.out.println("Month 9 has 31 days");
+		System.out.println("Month 8 has 31 days");
+		System.out.println("Month 9 has 30 days");
 		System.out.println("Month 10 has 31 days");
 		System.out.println("Month 11 has 30 days");
 		System.out.println("Month 12 has 31 days");
