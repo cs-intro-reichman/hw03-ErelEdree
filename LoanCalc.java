@@ -13,8 +13,8 @@ public class LoanCalc {
 	 */
 	public static void main(String[] args) {
 		// Gets the loan data
-		double loan = Double.parseDouble(args[0]);
-		double rate = Double.parseDouble(args[1]);
+		double loan = Double.parseDouble(args[0]); // getting the loan from the user
+		double rate = Double.parseDouble(args[1]); // getting the rate from the user
 		int n = Integer.parseInt(args[2]);
 		System.out.println("Loan sum = " + loan + ", interest rate = " + rate + "%, periods = " + n);
 
